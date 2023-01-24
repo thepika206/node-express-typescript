@@ -12,9 +12,12 @@ const app = (0, express_1.default)();
 const port = process.env.PORT;
 // Composition root
 let epicBattle = ioc_config_1.default.get(identifiers_1.default.BATTLE);
-// let armory = container.get<Armory>(SERVICE_IDENTIFIER.ARMORY);
+let leatherArmory = ioc_config_1.default.get(identifiers_1.default.ARMORY);
 // armory.getLeather();
 // /armory/leather
+app.get('/armory/leather', (req, res) => {
+    res.send(leatherArmory.getArmor());
+});
 // /armory/steel
 // console.log(epicBattle.fight());
 app.get('/', (req, res) => {

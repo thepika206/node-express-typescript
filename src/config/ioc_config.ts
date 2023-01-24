@@ -3,6 +3,7 @@ import "reflect-metadata";
 import { Container } from "inversify";
 
 import {
+  Armory,
   Battle,
   Boots,
   Gauntlet,
@@ -12,9 +13,11 @@ import {
   Weapon,
 } from "../interfaces";
 
+
 import {
   EpicBattle,
   Katana,
+  LeatherArmory,
   LeatherBoots,
   LeatherGauntlet,
   LeatherHelmet,
@@ -35,6 +38,11 @@ import TAG from "../constants/tags";
 
 let container = new Container();
 
+//Binding for armory
+container.bind<Armory>(SERVICE_IDENTIFIER.ARMORY).to(LeatherArmory)
+container.bind<Pauldron>(SERVICE_IDENTIFIER.PAULDRON).to(LeatherPauldron).whenTargetNamed(TAG.LV1);
+
+//Bindings for warriors in battle
 container.bind<Warrior>(SERVICE_IDENTIFIER.WARRIOR).to(Ninja).whenTargetNamed(TAG.LV1);
 container.bind<Warrior>(SERVICE_IDENTIFIER.WARRIOR).to(Samurai).whenTargetNamed(TAG.LV2);
 
