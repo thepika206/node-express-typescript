@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const TAG = {
-    CHINESE: "CHINESE",
-    JAPANESE: "JAPANESE"
+    LV1: "Rookie",
+    LV2: "Student"
 };
 exports.default = TAG;

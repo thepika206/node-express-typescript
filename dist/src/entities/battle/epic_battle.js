@@ -27,12 +27,12 @@ let EpicBattle = class EpicBattle {
 };
 __decorate([
     (0, inversify_1.inject)(identifiers_1.default.WARRIOR),
-    (0, inversify_1.named)(tags_1.default.CHINESE),
+    (0, inversify_1.named)(tags_1.default.LV1),
     __metadata("design:type", Object)
 ], EpicBattle.prototype, "warrior1", void 0);
 __decorate([
     (0, inversify_1.inject)(identifiers_1.default.WARRIOR),
-    (0, inversify_1.named)(tags_1.default.JAPANESE),
+    (0, inversify_1.named)(tags_1.default.LV2),
     __metadata("design:type", Object)
 ], EpicBattle.prototype, "warrior2", void 0);
 EpicBattle = __decorate([

@@ -1,6 +1,6 @@
 const TAG = {
-    CHINESE: "CHINESE",
-    JAPANESE: "JAPANESE"
+    LV1: "Rookie",
+    LV2: "Student"
 };
 
 export default TAG;
