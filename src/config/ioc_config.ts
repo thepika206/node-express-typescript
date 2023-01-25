@@ -40,7 +40,16 @@ let container = new Container();
 
 //Binding for armory
 container.bind<Armory>(SERVICE_IDENTIFIER.ARMORY).to(LeatherArmory)
+container.bind<Helmet>(SERVICE_IDENTIFIER.HELMET).to(LeatherHelmet).whenTargetNamed(TAG.LV1);
+container.bind<Gauntlet>(SERVICE_IDENTIFIER.GAUNTLET).to(LeatherGauntlet).whenTargetNamed(TAG.LV1);
+container.bind<Boots>(SERVICE_IDENTIFIER.BOOTS).to(LeatherBoots).whenTargetNamed(TAG.LV1);
 container.bind<Pauldron>(SERVICE_IDENTIFIER.PAULDRON).to(LeatherPauldron).whenTargetNamed(TAG.LV1);
+
+// container.bind<Armory>(SERVICE_IDENTIFIER.ARMORY).to(LeatherArmory)
+container.bind<Helmet>(SERVICE_IDENTIFIER.HELMET).to(SteelHelmet).whenTargetNamed(TAG.LV2);
+container.bind<Gauntlet>(SERVICE_IDENTIFIER.GAUNTLET).to(SteelGauntlet).whenTargetNamed(TAG.LV2);
+container.bind<Boots>(SERVICE_IDENTIFIER.BOOTS).to(SteelBoots).whenTargetNamed(TAG.LV2);
+container.bind<Pauldron>(SERVICE_IDENTIFIER.PAULDRON).to(SteelPauldron).whenTargetNamed(TAG.LV2);
 
 //Bindings for warriors in battle
 container.bind<Warrior>(SERVICE_IDENTIFIER.WARRIOR).to(Ninja).whenTargetNamed(TAG.LV1);

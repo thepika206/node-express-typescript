@@ -20,12 +20,19 @@ const inversify_1 = require("inversify");
 const identifiers_1 = __importDefault(require("../../../constants/identifiers"));
 const tags_1 = __importDefault(require("../../../constants/tags"));
 let LeatherArmory = class LeatherArmory {
-    constructor(pauldron) {
+    constructor(pauldron, helmet, gauntlet, boots) {
         this.name = "Leather Armory";
         this.pauldron = pauldron;
+        this.helmet = helmet;
+        this.gauntlet = gauntlet;
+        this.boots = boots;
     }
     getArmor() {
-        let desc = `list armor - class includes: ${this.pauldron.name}`;
+        let desc = `${this.name} contains:
+            \n ${this.pauldron.name},
+            \n ${this.helmet.name},
+            \n ${this.boots.name},
+            \n ${this.gauntlet.name}`;
         return desc;
     }
 };
@@ -33,6 +40,12 @@ LeatherArmory = __decorate([
     (0, inversify_1.injectable)(),
     __param(0, (0, inversify_1.inject)(identifiers_1.default.PAULDRON)),
     __param(0, (0, inversify_1.named)(tags_1.default.LV1)),
-    __metadata("design:paramtypes", [Object])
+    __param(1, (0, inversify_1.inject)(identifiers_1.default.HELMET)),
+    __param(1, (0, inversify_1.named)(tags_1.default.LV1)),
+    __param(2, (0, inversify_1.inject)(identifiers_1.default.GAUNTLET)),
+    __param(2, (0, inversify_1.named)(tags_1.default.LV1)),
+    __param(3, (0, inversify_1.inject)(identifiers_1.default.BOOTS)),
+    __param(3, (0, inversify_1.named)(tags_1.default.LV2)),
+    __metadata("design:paramtypes", [Object, Object, Object, Object])
 ], LeatherArmory);
 exports.LeatherArmory = LeatherArmory;

@@ -11,7 +11,15 @@ const tags_1 = __importDefault(require("../constants/tags"));
 let container = new inversify_1.Container();
 //Binding for armory
 container.bind(identifiers_1.default.ARMORY).to(entities_1.LeatherArmory);
+container.bind(identifiers_1.default.HELMET).to(entities_1.LeatherHelmet).whenTargetNamed(tags_1.default.LV1);
+container.bind(identifiers_1.default.GAUNTLET).to(entities_1.LeatherGauntlet).whenTargetNamed(tags_1.default.LV1);
+container.bind(identifiers_1.default.BOOTS).to(entities_1.LeatherBoots).whenTargetNamed(tags_1.default.LV1);
 container.bind(identifiers_1.default.PAULDRON).to(entities_1.LeatherPauldron).whenTargetNamed(tags_1.default.LV1);
+// container.bind<Armory>(SERVICE_IDENTIFIER.ARMORY).to(LeatherArmory)
+container.bind(identifiers_1.default.HELMET).to(entities_1.SteelHelmet).whenTargetNamed(tags_1.default.LV2);
+container.bind(identifiers_1.default.GAUNTLET).to(entities_1.SteelGauntlet).whenTargetNamed(tags_1.default.LV2);
+container.bind(identifiers_1.default.BOOTS).to(entities_1.SteelBoots).whenTargetNamed(tags_1.default.LV2);
+container.bind(identifiers_1.default.PAULDRON).to(entities_1.SteelPauldron).whenTargetNamed(tags_1.default.LV2);
 //Bindings for warriors in battle
 container.bind(identifiers_1.default.WARRIOR).to(entities_1.Ninja).whenTargetNamed(tags_1.default.LV1);
 container.bind(identifiers_1.default.WARRIOR).to(entities_1.Samurai).whenTargetNamed(tags_1.default.LV2);
