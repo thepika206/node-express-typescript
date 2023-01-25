@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.SteelPauldron = exports.LeatherPauldron = exports.SteelHelmet = exports.LeatherHelmet = exports.SteelGauntlet = exports.LeatherGauntlet = exports.SteelBoots = exports.LeatherBoots = exports.Shuriken = exports.Katana = exports.Samurai = exports.Ninja = exports.EpicBattle = void 0;
+exports.LeatherArmory = exports.SteelPauldron = exports.LeatherPauldron = exports.SteelHelmet = exports.LeatherHelmet = exports.SteelGauntlet = exports.LeatherGauntlet = exports.SteelBoots = exports.LeatherBoots = exports.Shuriken = exports.Katana = exports.Samurai = exports.Ninja = exports.EpicBattle = void 0;
 var epic_battle_1 = require("./battle/epic_battle");
 Object.defineProperty(exports, "EpicBattle", { enumerable: true, get: function () { return epic_battle_1.EpicBattle; } });
 var warriors_1 = require("./warriors");
@@ -21,3 +21,5 @@ Object.defineProperty(exports, "SteelHelmet", { enumerable: true, get: function 
 var pauldron_1 = require("./armor/pauldron");
 Object.defineProperty(exports, "LeatherPauldron", { enumerable: true, get: function () { return pauldron_1.LeatherPauldron; } });
 Object.defineProperty(exports, "SteelPauldron", { enumerable: true, get: function () { return pauldron_1.SteelPauldron; } });
+var leather_armory_1 = require("./armor/armory/leather_armory");
+Object.defineProperty(exports, "LeatherArmory", { enumerable: true, get: function () { return leather_armory_1.LeatherArmory; } });
