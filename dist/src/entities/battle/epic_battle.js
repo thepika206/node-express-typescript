@@ -24,6 +24,26 @@ let EpicBattle = class EpicBattle {
                 ${this.warrior2.name} (wielding: ${this.warrior2.weapon.name}) (wearing: ${this.warrior2.helmet.name}, ${this.warrior2.pauldron.name}, ${this.warrior2.gauntlet.name}, ${this.warrior2.boots.name})`;
         return desc;
     }
+    getLeatherArmor() {
+        let desc = `
+            Leather Armory contents: \n
+            ${this.leatherArmory.helmet.name}, \n
+            ${this.leatherArmory.pauldron.name}, \n
+            ${this.leatherArmory.gauntlet.name}, \n
+            ${this.leatherArmory.boots.name}, \n
+        `;
+        return desc;
+    }
+    getSteelArmor() {
+        let desc = `
+            Leather Armory contents: \n
+            ${this.leatherArmory.helmet.name}, \n
+            ${this.leatherArmory.pauldron.name}, \n
+            ${this.leatherArmory.gauntlet.name}, \n
+            ${this.leatherArmory.boots.name}, \n
+        `;
+        return desc;
+    }
 };
 __decorate([
     (0, inversify_1.inject)(identifiers_1.default.WARRIOR),
@@ -35,6 +55,16 @@ __decorate([
     (0, inversify_1.named)(tags_1.default.LV2),
     __metadata("design:type", Object)
 ], EpicBattle.prototype, "warrior2", void 0);
+__decorate([
+    (0, inversify_1.inject)(identifiers_1.default.WARRIOR),
+    (0, inversify_1.named)(tags_1.default.LV1),
+    __metadata("design:type", Object)
+], EpicBattle.prototype, "leatherArmory", void 0);
+__decorate([
+    (0, inversify_1.inject)(identifiers_1.default.WARRIOR),
+    (0, inversify_1.named)(tags_1.default.LV2),
+    __metadata("design:type", Object)
+], EpicBattle.prototype, "steelArmory", void 0);
 EpicBattle = __decorate([
     (0, inversify_1.injectable)()
 ], EpicBattle);

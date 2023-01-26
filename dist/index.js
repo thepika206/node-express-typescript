@@ -23,6 +23,12 @@ app.get('/', (req, res) => {
 app.get('/fight', (req, res) => {
     res.send(epicBattle.fight());
 });
+app.get('/armory/leather', (req, res) => {
+    res.send(epicBattle.getLeatherArmor());
+});
+app.get('/armory/steel', (req, res) => {
+    res.send(epicBattle.getSteelArmor());
+});
 app.listen(port, () => {
     console.log(`⚡️[server]: Server is running at http://localhost:${port}`);
 });
