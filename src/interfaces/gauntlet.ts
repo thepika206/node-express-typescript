@@ -1,3 +1,3 @@
 export interface Gauntlet {
-    name: string;
+    name: string
 }

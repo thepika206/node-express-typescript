@@ -1,11 +1,10 @@
-import { injectable } from "inversify";
-
-import { Helmet } from "../../../interfaces";
+import { injectable } from "inversify"
+import { Helmet } from "../../../interfaces"
 
 @injectable()
 export class SteelHelmet implements Helmet {
-    public name: string;
+    public name: string
     public constructor() {
-        this.name = "Steel Helmet";
+        this.name = "Steel Helmet"
     }
 }

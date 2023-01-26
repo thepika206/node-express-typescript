@@ -1,5 +1,4 @@
 import { inject, injectable } from "inversify";
-
 import SERVICE_IDENTIFIER from "../../constants/identifiers";
 import { Weapon, Warrior, Pauldron, Gauntlet, Helmet, Boots } from "../../interfaces";
 

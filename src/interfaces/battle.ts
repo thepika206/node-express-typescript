@@ -1,5 +1,5 @@
 export default interface Battle {
-    fight(): string;
+    fight(): string
     getLeatherArmor(): object
     getSteelArmor(): object
 }

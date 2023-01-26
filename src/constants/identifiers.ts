@@ -7,6 +7,6 @@ const SERVICE_IDENTIFIER = {
     PAULDRON: Symbol.for("Pauldron"),
     WARRIOR: Symbol.for("Warrior"),
     WEAPON: Symbol.for("Weapon"),
-};
+}
 
-export default SERVICE_IDENTIFIER;
+export default SERVICE_IDENTIFIER

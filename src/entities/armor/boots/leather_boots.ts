@@ -1,11 +1,10 @@
-import { injectable } from "inversify";
-
-import { Boots } from "../../../interfaces";
+import { injectable } from "inversify"
+import { Boots } from "../../../interfaces"
 
 @injectable()
 export class LeatherBoots implements Boots {
-    public name: string;
+    public name: string
     public constructor() {
-        this.name = "Leather Boots";
+        this.name = "Leather Boots"
     }
 }
