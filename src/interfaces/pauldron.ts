@@ -1,3 +1,3 @@
 export interface Pauldron {
-    name: string;
+    name: string
 }

@@ -1,2 +1,2 @@
-export { LeatherGauntlet } from "./leather_gauntlet";
-export { SteelGauntlet } from "./steel_gauntlet";
+export { LeatherGauntlet } from "./leather_gauntlet"
+export { SteelGauntlet } from "./steel_gauntlet"
