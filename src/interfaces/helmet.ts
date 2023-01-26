@@ -1,3 +1,3 @@
 export interface Helmet {
-    name: string;
+    name: string
 }

@@ -1,3 +1,3 @@
 export interface Boots {
-    name: string;
+    name: string
 }
