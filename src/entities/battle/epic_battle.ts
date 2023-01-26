@@ -1,6 +1,6 @@
 import { inject, injectable, named } from "inversify";
 
-import { Battle, Warrior } from "../../interfaces";
+import { Armory, Battle, Warrior } from "../../interfaces";
 import SERVICE_IDENTIFIER from "../../constants/identifiers";
 import TAG from "../../constants/tags";
 
@@ -9,8 +9,10 @@ export class EpicBattle implements Battle {
 
     @inject(SERVICE_IDENTIFIER.WARRIOR) @named(TAG.LV1) public warrior1: Warrior;
     @inject(SERVICE_IDENTIFIER.WARRIOR) @named(TAG.LV2) public warrior2: Warrior;
-    @inject(SERVICE_IDENTIFIER.WARRIOR) @named(TAG.LV1) public leatherArmory: Warrior;
+    // @inject(SERVICE_IDENTIFIER.WARRIOR) @named(TAG.LV1) public leatherArmory: Warrior;
     @inject(SERVICE_IDENTIFIER.WARRIOR) @named(TAG.LV2) public steelArmory: Warrior;
+    @inject(SERVICE_IDENTIFIER.ARMORY) @named(TAG.LV1) public leatherArmory: Armory;
+    // @inject(SERVICE_IDENTIFIER.ARMORY) @named(TAG.LV2) public steelArmory: Armory;
     
     public fight() {
         let desc = `FIGHT!
@@ -23,7 +25,7 @@ export class EpicBattle implements Battle {
     public getLeatherArmor() {
 
         let desc = `
-            Leather Armory contents: \n
+            ${this.leatherArmory.name} contents: \n
             ${this.leatherArmory.helmet.name}, \n
             ${this.leatherArmory.pauldron.name}, \n
             ${this.leatherArmory.gauntlet.name}, \n

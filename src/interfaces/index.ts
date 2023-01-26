@@ -5,3 +5,4 @@ export { Helmet } from "./helmet";
 export { Pauldron } from "./pauldron";
 export { Warrior } from "./warrior";
 export { Weapon } from "./weapon";
+export { Armory } from "./armory";

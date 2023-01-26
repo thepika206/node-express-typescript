@@ -9,6 +9,7 @@ const entities_1 = require("../entities");
 const identifiers_1 = __importDefault(require("../constants/identifiers"));
 const tags_1 = __importDefault(require("../constants/tags"));
 let container = new inversify_1.Container();
+container.bind(identifiers_1.default.ARMORY).to(entities_1.LeatherArmory).whenTargetNamed(tags_1.default.LV1);
 container.bind(identifiers_1.default.WARRIOR).to(entities_1.Ninja).whenTargetNamed(tags_1.default.LV1);
 container.bind(identifiers_1.default.WARRIOR).to(entities_1.Samurai).whenTargetNamed(tags_1.default.LV2);
 container.bind(identifiers_1.default.WEAPON).to(entities_1.Shuriken).whenParentNamed(tags_1.default.LV1);
