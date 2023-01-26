@@ -1,8 +1,10 @@
 import Battle from "./src/interfaces/battle";
+import { Armory } from "./src/interfaces";
 import container from "./src/config/ioc_config";
 import SERVICE_IDENTIFIER from "./src/constants/identifiers";
 import express, { Express, Request, Response } from 'express';
 import dotenv from 'dotenv';
+import { LeatherArmory } from "./src/entities/armor/armory/leather_armory";
 
 dotenv.config();
 
