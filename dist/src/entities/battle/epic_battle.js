@@ -17,7 +17,6 @@ const inversify_1 = require("inversify");
 const identifiers_1 = __importDefault(require("../../constants/identifiers"));
 const tags_1 = __importDefault(require("../../constants/tags"));
 let EpicBattle = class EpicBattle {
-    // @inject(SERVICE_IDENTIFIER.ARMORY) @named(TAG.LV2) public steelArmory: Armory;
     fight() {
         let desc = `FIGHT!
                 ${this.warrior1.name} (wielding: ${this.warrior1.weapon.name}) (wearing: ${this.warrior1.helmet.name}, ${this.warrior1.pauldron.name}, ${this.warrior1.gauntlet.name}, ${this.warrior1.boots.name})
@@ -37,11 +36,11 @@ let EpicBattle = class EpicBattle {
     }
     getSteelArmor() {
         let desc = `
-            Leather Armory contents: \n
-            ${this.leatherArmory.helmet.name}, \n
-            ${this.leatherArmory.pauldron.name}, \n
-            ${this.leatherArmory.gauntlet.name}, \n
-            ${this.leatherArmory.boots.name}, \n
+            ${this.steelArmory.name} contents: \n
+            ${this.steelArmory.helmet.name}, \n
+            ${this.steelArmory.pauldron.name}, \n
+            ${this.steelArmory.gauntlet.name}, \n
+            ${this.steelArmory.boots.name}, \n
         `;
         return desc;
     }
@@ -57,15 +56,15 @@ __decorate([
     __metadata("design:type", Object)
 ], EpicBattle.prototype, "warrior2", void 0);
 __decorate([
-    (0, inversify_1.inject)(identifiers_1.default.WARRIOR),
-    (0, inversify_1.named)(tags_1.default.LV2),
-    __metadata("design:type", Object)
-], EpicBattle.prototype, "steelArmory", void 0);
-__decorate([
     (0, inversify_1.inject)(identifiers_1.default.ARMORY),
     (0, inversify_1.named)(tags_1.default.LV1),
     __metadata("design:type", Object)
 ], EpicBattle.prototype, "leatherArmory", void 0);
+__decorate([
+    (0, inversify_1.inject)(identifiers_1.default.ARMORY),
+    (0, inversify_1.named)(tags_1.default.LV2),
+    __metadata("design:type", Object)
+], EpicBattle.prototype, "steelArmory", void 0);
 EpicBattle = __decorate([
     (0, inversify_1.injectable)()
 ], EpicBattle);

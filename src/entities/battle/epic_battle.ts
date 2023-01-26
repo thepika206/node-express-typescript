@@ -9,10 +9,8 @@ export class EpicBattle implements Battle {
 
     @inject(SERVICE_IDENTIFIER.WARRIOR) @named(TAG.LV1) public warrior1: Warrior;
     @inject(SERVICE_IDENTIFIER.WARRIOR) @named(TAG.LV2) public warrior2: Warrior;
-    // @inject(SERVICE_IDENTIFIER.WARRIOR) @named(TAG.LV1) public leatherArmory: Warrior;
-    @inject(SERVICE_IDENTIFIER.WARRIOR) @named(TAG.LV2) public steelArmory: Warrior;
     @inject(SERVICE_IDENTIFIER.ARMORY) @named(TAG.LV1) public leatherArmory: Armory;
-    // @inject(SERVICE_IDENTIFIER.ARMORY) @named(TAG.LV2) public steelArmory: Armory;
+    @inject(SERVICE_IDENTIFIER.ARMORY) @named(TAG.LV2) public steelArmory: Armory;
     
     public fight() {
         let desc = `FIGHT!
@@ -35,11 +33,11 @@ export class EpicBattle implements Battle {
     }
     public getSteelArmor() {
         let desc = `
-            Leather Armory contents: \n
-            ${this.leatherArmory.helmet.name}, \n
-            ${this.leatherArmory.pauldron.name}, \n
-            ${this.leatherArmory.gauntlet.name}, \n
-            ${this.leatherArmory.boots.name}, \n
+            ${this.steelArmory.name} contents: \n
+            ${this.steelArmory.helmet.name}, \n
+            ${this.steelArmory.pauldron.name}, \n
+            ${this.steelArmory.gauntlet.name}, \n
+            ${this.steelArmory.boots.name}, \n
         `
         return desc
     }

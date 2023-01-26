@@ -6,6 +6,7 @@ import { Armory, Battle, Boots, Gauntlet, Helmet, Pauldron, Warrior, Weapon} fro
 
 import {
   LeatherArmory,
+  SteelArmory,
   EpicBattle,
   Katana,
   LeatherBoots,
@@ -29,6 +30,7 @@ import TAG from "../constants/tags";
 let container = new Container();
 
 container.bind<Armory>(SERVICE_IDENTIFIER.ARMORY).to(LeatherArmory).whenTargetNamed(TAG.LV1);
+container.bind<Armory>(SERVICE_IDENTIFIER.ARMORY).to(SteelArmory).whenTargetNamed(TAG.LV2);
 
 container.bind<Warrior>(SERVICE_IDENTIFIER.WARRIOR).to(Ninja).whenTargetNamed(TAG.LV1);
 container.bind<Warrior>(SERVICE_IDENTIFIER.WARRIOR).to(Samurai).whenTargetNamed(TAG.LV2);

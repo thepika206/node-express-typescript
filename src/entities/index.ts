@@ -6,3 +6,4 @@ export { LeatherGauntlet, SteelGauntlet } from "./armor/gauntlet";
 export { LeatherHelmet, SteelHelmet } from "./armor/helmet";
 export { LeatherPauldron, SteelPauldron } from "./armor/pauldron";
 export { LeatherArmory } from "./armory/leather_armory"
+export { SteelArmory } from "./armory/steel_armory"
