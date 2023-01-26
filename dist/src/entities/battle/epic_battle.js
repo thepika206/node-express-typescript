@@ -25,23 +25,11 @@ let EpicBattle = class EpicBattle {
         return desc;
     }
     getLeatherArmor() {
-        let desc = `
-            ${this.leatherArmory.name} contents: \n
-            ${this.leatherArmory.helmet.name}, \n
-            ${this.leatherArmory.pauldron.name}, \n
-            ${this.leatherArmory.gauntlet.name}, \n
-            ${this.leatherArmory.boots.name}, \n
-        `;
+        let desc = this.leatherArmory;
         return desc;
     }
     getSteelArmor() {
-        let desc = `
-            ${this.steelArmory.name} contents: \n
-            ${this.steelArmory.helmet.name}, \n
-            ${this.steelArmory.pauldron.name}, \n
-            ${this.steelArmory.gauntlet.name}, \n
-            ${this.steelArmory.boots.name}, \n
-        `;
+        let desc = this.steelArmory;
         return desc;
     }
 };
